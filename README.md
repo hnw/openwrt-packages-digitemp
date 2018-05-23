@@ -11,6 +11,7 @@ See [hnw/openwrt-packages](https://github.com/hnw/openwrt-packages).
 To build these packages, add the following line to the feeds.conf in the OpenWrt buildroot:
 
 ```
+$ cp feeds.conf.default feeds.conf # if needed
 $ echo 'src-git hnw_digitemp https://github.com/hnw/openwrt-packages-digitemp.git' >> feeds.conf
 ```
 
@@ -19,5 +20,7 @@ Then you can build packages as follows:
 ```
 $ ./scripts/feeds update -a
 $ ./scripts/feeds install digitemp
+$ make defconfig
+$ make package/toolchain/compile
 $ make packages/digitemp/compile
 ```
