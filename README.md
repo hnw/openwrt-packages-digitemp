@@ -22,5 +22,5 @@ $ ./scripts/feeds update -a
 $ ./scripts/feeds install digitemp
 $ make defconfig
 $ make package/toolchain/compile
-$ make packages/digitemp/compile
+$ make package/digitemp/compile
 ```
